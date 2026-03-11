@@ -1,0 +1,17 @@
+[project]
+name = "wireapps-ai-program"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "rusiruavb", email = "rusiruavb98@gmail.com"},
+]
+dependencies = ["fastapi>=0.133.1", "uvicorn>=0.41.0", "anthropic>=0.84.0", "pydantic-settings>=2.13.1", "jupyter>=1.1.1", "ollama>=0.6.1"]
+requires-python = "==3.11.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.pdm.scripts]
+dev = "uvicorn app.main:app --reload"
+
+[tool.pdm]
+distribution = false
